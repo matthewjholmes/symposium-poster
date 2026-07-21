@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Poster presentation, PDF, and citation.">
+  <title>Poster Presentation</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <article class="poster-card">
+      <header class="hero">
+        <p class="eyebrow">Poster presentation</p>
+        <!-- Replace the title below with the final poster title. -->
+        <h1>Poster title goes here</h1>
+        <!-- Replace the author and event details below. -->
+        <p class="authors">Matthew Holmes and collaborators</p>
+        <p class="event">Symposium name · Institution · 2026</p>
+      </header>
+
+      <section class="actions" aria-label="Poster downloads">
+        <a class="button primary" href="poster.pdf">View poster PDF</a>
+        <button class="button secondary" id="copy-citation" type="button">Copy citation</button>
+      </section>
+
+      <section>
+        <h2>About this poster</h2>
+        <p>
+          Replace this paragraph with a concise abstract or two-to-three sentence summary.
+          The landing page can remain brief because the full presentation is available in the PDF.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <h2>Citation</h2>
+          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <!-- Replace this with the final preferred citation. Keep the id unchanged. -->
+        <p class="citation" id="citation-text">Holmes, M., et al. (2026). <em>Poster title goes here</em> [Poster presentation]. Symposium name, Institution.</p>
+        <p class="download-links">
+          <a href="citation.bib">BibTeX</a>
+          <span aria-hidden="true">·</span>
+          <a href="citation.ris">RIS</a>
+        </p>
+      </section>
+
+      <footer>
+        <p>For questions or accessibility needs, add a contact email here.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    const copyButton = document.getElementById('copy-citation');
+    const citation = document.getElementById('citation-text');
+    const status = document.getElementById('copy-status');
+
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(citation.innerText.trim());
+        status.textContent = 'Citation copied';
+      } catch (error) {
+        status.textContent = 'Select and copy the citation manually';
+      }
+      window.setTimeout(() => { status.textContent = ''; }, 3000);
+    });
+  </script>
+</body>
+</html>
