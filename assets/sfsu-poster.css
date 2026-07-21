@@ -167,11 +167,12 @@ h1 {
   max-width: 17ch;
   margin-bottom: 1.4rem;
   color: var(--sfsu-purple);
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 900;
-  letter-spacing: -0.045em;
-  line-height: 0.97;
-  text-wrap: balance;
+    font-size: clamp(1.6rem, 1.4vw + 1rem, 2.3rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    max-width: 42rem;
 }
 
 h2 {
