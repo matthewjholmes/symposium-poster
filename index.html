@@ -3,54 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Poster presentation, PDF, and citation.">
-  <title>Poster Presentation</title>
+  <meta name="description" content="Poster presentation, downloadable PDF, and citation information.">
+  <meta name="theme-color" content="#231161">
+  <title>Poster Presentation | San Francisco State University</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <main class="page-shell">
-    <article class="poster-card">
-      <header class="hero">
-        <p class="eyebrow">Poster presentation</p>
-        <!-- Replace the title below with the final poster title. -->
-        <h1>Poster title goes here</h1>
-        <!-- Replace the author and event details below. -->
-        <p class="authors">Matthew Holmes and collaborators</p>
-        <p class="event">Symposium name · Institution · 2026</p>
-      </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-      <section class="actions" aria-label="Poster downloads">
-        <a class="button primary" href="poster.pdf">View poster PDF</a>
-        <button class="button secondary" id="copy-citation" type="button">Copy citation</button>
-      </section>
+  <header class="site-header">
+    <div class="brand-bar">
+      <div class="brand-bar__inner">
+        <a class="university-name" href="https://www.sfsu.edu/">San Francisco State University</a>
+        <span class="site-type">Research poster</span>
+      </div>
+    </div>
+    <div class="gold-rule" aria-hidden="true"></div>
+  </header>
 
-      <section>
-        <h2>About this poster</h2>
-        <p>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="poster-title">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Poster presentation</p>
+          <!-- Replace the title below with the final poster title. -->
+          <h1 id="poster-title">Poster title goes here</h1>
+          <!-- Replace the author and event details below. -->
+          <p class="authors">Matthew Holmes and collaborators</p>
+          <p class="event">Symposium name <span aria-hidden="true">·</span> San Francisco State University <span aria-hidden="true">·</span> 2026</p>
+
+          <div class="actions" aria-label="Poster actions">
+            <a class="button button--primary" href="poster.pdf">
+              <span>View poster PDF</span>
+              <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18">
+                <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <button class="button button--secondary" id="copy-citation" type="button">Copy citation</button>
+          </div>
+        </div>
+
+        <aside class="poster-file" aria-label="Poster file information">
+          <div class="poster-file__label">PDF</div>
+          <div>
+            <p class="poster-file__title">Full-resolution poster</p>
+            <p class="poster-file__meta">Open in your browser or download for later.</p>
+          </div>
+          <a class="text-link" href="poster.pdf" download>Download PDF</a>
+        </aside>
+      </div>
+    </section>
+
+    <div class="content-shell">
+      <section class="summary-panel" aria-labelledby="about-heading">
+        <p class="section-kicker">Overview</p>
+        <h2 id="about-heading">About this poster</h2>
+        <p class="lede">
           Replace this paragraph with a concise abstract or two-to-three sentence summary.
-          The landing page can remain brief because the full presentation is available in the PDF.
+          The landing page can remain brief because the complete presentation is available in the PDF.
         </p>
       </section>
 
-      <section>
+      <section class="citation-panel" aria-labelledby="citation-heading">
         <div class="section-heading">
-          <h2>Citation</h2>
+          <div>
+            <p class="section-kicker">Reference</p>
+            <h2 id="citation-heading">Suggested citation</h2>
+          </div>
           <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
         </div>
-        <!-- Replace this with the final preferred citation. Keep the id unchanged. -->
-        <p class="citation" id="citation-text">Holmes, M., et al. (2026). <em>Poster title goes here</em> [Poster presentation]. Symposium name, Institution.</p>
-        <p class="download-links">
-          <a href="citation.bib">BibTeX</a>
-          <span aria-hidden="true">·</span>
-          <a href="citation.ris">RIS</a>
-        </p>
-      </section>
 
-      <footer>
-        <p>For questions or accessibility needs, add a contact email here.</p>
-      </footer>
-    </article>
+        <!-- Replace this with the final preferred citation. Keep the id unchanged. -->
+        <p class="citation" id="citation-text">Holmes, M., et al. (2026). <em>Poster title goes here</em> [Poster presentation]. Symposium name, San Francisco State University.</p>
+
+        <div class="citation-downloads" aria-label="Citation downloads">
+          <span>Download citation:</span>
+          <a href="citation.bib">BibTeX</a>
+          <a href="citation.ris">RIS</a>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p class="footer-heading">San Francisco State University</p>
+        <p>1600 Holloway Avenue, San Francisco, CA 94132</p>
+      </div>
+      <p class="footer-contact">For questions or accessibility needs, add a contact email here.</p>
+    </div>
+  </footer>
 
   <script>
     const copyButton = document.getElementById('copy-citation');
@@ -62,7 +109,7 @@
         await navigator.clipboard.writeText(citation.innerText.trim());
         status.textContent = 'Citation copied';
       } catch (error) {
-        status.textContent = 'Select and copy the citation manually';
+        status.textContent = 'Select and copy manually';
       }
       window.setTimeout(() => { status.textContent = ''; }, 3000);
     });
