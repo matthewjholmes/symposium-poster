@@ -244,8 +244,6 @@ h2 {
   background: var(--sfsu-purple-tint);
 }
 
-
-
 .content-shell {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -900,5 +898,174 @@ h2 {
 
   .hero .poster-file {
     margin-top: 0;
+  }
+}
+
+/* --------------------------------------------------
+   Citation utilities
+-------------------------------------------------- */
+
+.citation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(35, 17, 97, 0.16);
+}
+
+.citation-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.9rem;
+  margin: 0;
+}
+
+.citation-downloads span {
+  font-weight: 600;
+  color: #4e495b;
+}
+
+.citation-copy-button {
+  flex: 0 0 auto;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 36rem) {
+  .citation-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .citation-copy-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------
+   Full-page PDF viewer
+-------------------------------------------------- */
+
+.pdf-viewer-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: #f5f3f8;
+}
+
+.viewer-header {
+  flex: 0 0 auto;
+  border-bottom: 0.35rem solid #f4c300;
+  background: #231161;
+  color: #ffffff;
+}
+
+.viewer-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+  padding: 1rem 0;
+}
+
+.viewer-title-group {
+  min-width: 0;
+}
+
+.viewer-kicker {
+  margin: 0 0 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #f4c300;
+}
+
+.viewer-title {
+  max-width: 58rem;
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.viewer-subtitle {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.viewer-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pdf-viewer {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pdf-viewer__embed {
+  display: block;
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  border: 0;
+  background: #d9d9d9;
+}
+
+.pdf-fallback {
+  max-width: 42rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #d8d3e2;
+}
+
+.pdf-fallback h2 {
+  margin-top: 0;
+}
+
+.pdf-fallback__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 48rem) {
+  .viewer-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .viewer-actions {
+    width: 100%;
+  }
+
+  .viewer-actions .button {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .pdf-viewer__embed {
+    min-height: calc(100vh - 11rem);
   }
 }

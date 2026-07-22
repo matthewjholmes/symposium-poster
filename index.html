@@ -37,15 +37,30 @@
           <span aria-hidden="true">·</span> San Francisco State University <span aria-hidden="true">·</span> July 25, 2026</p>
 
             <div class="actions" aria-label="Poster actions">
-              <a class="button button--primary" href="poster.html">
+              <!-- <a class="button button--primary" href="poster.html">
                 <span>View poster</span>
 
                 <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18">
                   <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-              </a>
-            <button class="button button--secondary" id="copy-citation" type="button">Copy citation</button>
+              </a> -->
+
+              <div class="actions" aria-label="Poster actions">
+                <a class="button button--primary" href="poster.html">
+                  <span>View poster</span>
+              
+                  <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18">
+                    <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              
+                <a class="button button--secondary" href="program.html">
+                  <span>Symposium program</span>
+                </a>
+              </div>
+
           </div>
         </div>
 
@@ -116,7 +131,7 @@
           across San Francisco. This study examines associations among heatwave exposure,
           social vulnerability, historical redlining, building age, cooling-related permits,
           tree planting, and new housing development at the census-tract level.
-          <br>Heat-adaptation investments were somewhat more common in hotter areas, but
+          <br><br>Heat-adaptation investments were somewhat more common in hotter areas, but
           historically lower-graded Home Owners’ Loan Corporation neighborhoods had
           substantially lower adjusted odds of receiving cooling-related building updates.
         </p>
@@ -139,11 +154,18 @@
           Summer Undergraduate Research Symposium, San Francisco, CA.
         </p>
 
-        <div class="citation-downloads" aria-label="Citation downloads">
-          <span>Download citation:</span>
-          <a href="citation.bib">BibTeX</a>
-          <a href="citation.ris">RIS</a>
+        <div class="citation-actions">
+          <div class="citation-downloads" aria-label="Citation downloads">
+            <span>Download citation:</span>
+            <a href="citation.bib">BibTeX</a>
+            <a href="citation.ris">RIS</a>
+          </div>
+
+          <button class="button button--secondary citation-copy-button" id="copy-citation" type="button">
+            Copy citation
+          </button>
         </div>
+
       </section>
     </div>
   </main>
