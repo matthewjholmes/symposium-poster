@@ -1,9 +1,9 @@
 :root {
   color-scheme: light;
-  --sfsu-purple: #231161;
+  --sfsu-purple: #442C8B;
   --sfsu-purple-dark: #170b42;
   --sfsu-purple-tint: #eeeaf6;
-  --sfsu-gold: #c99700;
+  --sfsu-gold: #DCAE27;
   --ink: #17151c;
   --muted: #5f5b68;
   --line: #d9d4df;
@@ -512,7 +512,7 @@ h2 {
 .viewer-header {
   flex: 0 0 auto;
   border-bottom: 0.35rem solid #f4c300;
-  background: #231161;
+  background: #442C8B;
   color: #ffffff;
 }
 
