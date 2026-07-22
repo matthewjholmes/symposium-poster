@@ -316,7 +316,7 @@ h2 {
 }
 
 .site-footer {
-  background: var(--sfsu-purple-dark);
+  background: var(--sfsu-purple);
   color: var(--paper);
 }
 
@@ -1109,7 +1109,7 @@ h2 {
 -------------------------------------------------- */
 
 .site-footer {
-  background: #180844;
+  background: var(--sfsu-purple);
   color: #ffffff;
 }
 
