@@ -392,7 +392,7 @@ h2 {
   }
 
   h1 {
-    font-size: clamp(2.55rem, 15vw, 4rem);
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
   }
 
   .actions {
@@ -872,14 +872,6 @@ h2 {
   height: auto;
   min-height: 0;
   object-fit: contain;
-}
-
-@media (max-width: 42rem) and (orientation: portrait) {
-  .hero .hero__content #poster-title {
-    font-size: 3.5rem;
-    line-height: 1.18;
-    max-width: none;
-  }
 }
 
 .hero__inner {
