@@ -876,7 +876,7 @@ h2 {
 
 @media (max-width: 42rem) and (orientation: portrait) {
   .hero .hero__content #poster-title {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     line-height: 1.18;
     max-width: none;
   }
