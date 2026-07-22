@@ -873,3 +873,11 @@ h2 {
   min-height: 0;
   object-fit: contain;
 }
+
+@media (max-width: 42rem) and (orientation: portrait) {
+  .hero .hero__content #poster-title {
+    font-size: 1.08rem;
+    line-height: 1.18;
+    max-width: none;
+  }
+}
