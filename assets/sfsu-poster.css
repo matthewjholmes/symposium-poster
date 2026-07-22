@@ -881,3 +881,14 @@ h2 {
     max-width: none;
   }
 }
+
+.hero__inner {
+  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 20rem);
+  column-gap: clamp(2.5rem, 4vw, 4rem);
+  align-items: start;
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+}
+
+.hero .poster-file {
+  justify-self: start;
+}
