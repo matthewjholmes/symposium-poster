@@ -129,7 +129,8 @@ a:hover {
   bottom: -12rem;
   width: 29rem;
   height: 29rem;
-  border: 4.25rem solid var(--sfsu-purple-tint);
+  border: 4.25rem solid #FFE2B4;
+  opacity: .8;
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -180,7 +181,8 @@ h1 {
 h2 {
   margin-bottom: 0.8rem;
   color: var(--sfsu-purple);
-  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  /* font-size: clamp(1.65rem, 3vw, 2.25rem); */
+  font-size: clamp(1.3rem, 1.2vw + 1rem, 1.7rem);
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.08;
@@ -647,7 +649,7 @@ h2 {
   margin: 0;
   font-size: clamp(1.3rem, 1.2vw + 1rem, 1.7rem);
   line-height: 1.15;
-  color: #231161;
+  color: var(--sfsu-purple);
 }
 
 .poster-file__details {
@@ -682,7 +684,7 @@ h2 {
   font-size: 1rem;
   font-weight: 650;
   line-height: 1.3;
-  color: #231161;
+  color: var(--sfsu-purple);
 }
 
 .poster-file__description {
