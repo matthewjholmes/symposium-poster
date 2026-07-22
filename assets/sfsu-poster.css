@@ -884,3 +884,21 @@ h2 {
 .hero .poster-file {
   justify-self: start;
 }
+
+@media (max-width: 48rem) and (orientation: portrait) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .hero__content,
+  .hero .poster-file {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .hero .poster-file {
+    margin-top: 0;
+  }
+}
