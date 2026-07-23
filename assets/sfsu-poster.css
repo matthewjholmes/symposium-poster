@@ -184,7 +184,7 @@ h2 {
 
   background: url("largedisk.png") center / contain no-repeat;
 
-  opacity: 0.16;
+  opacity: 0.25;
   filter: saturate(0.7) brightness(1.12);
   content: "";
   pointer-events: none;
